@@ -7,7 +7,6 @@
 
   function ttTraveller() {
     return {
-      require: ['traveller'],
       scope: {
         traveller: "="
       },
