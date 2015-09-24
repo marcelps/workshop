@@ -1,0 +1,48 @@
+<html ng-app="travel-tainment">
+  <head>
+    <title>Learning AngularJS</title>
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../../styles/samples.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Sample</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- Our Code goes here -->
+      <section class="sample" ng-controller="workshop as w">
+
+        <input type="text" ng-model="query">
+
+        <table class="table table-striped">
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+          </tr>
+          <tr ng-repeat="person in w.people | filter:query">
+            <td>
+              {{person.firstname}}
+            </td>
+            <td>
+              {{person.lastname}}
+            </td>
+          </tr>
+        </table>
+      </section>
+
+    </div>
+
+    <!-- AngularJS -->
+    <script src="../../bower_components/angular/angular.js"></script>
+    <script src="./module.js" charset="utf-8"></script>
+    <script src="./workshop.controller.js" charset="utf-8"></script>
+  </body>
+</html>
