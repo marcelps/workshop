@@ -29,6 +29,18 @@
         <input ng-model="vm.age">
 
         <tt-controller></tt-controller>
+
+        <hr>
+
+        <section ng-controller="travellerController as ctrl">
+
+          <tt-toolbar>
+            <tt-traveller ng-repeat="traveller in ctrl.travellers" traveller="traveller">
+            </tt-traveller>
+          </tt-toolbar>
+
+        </section>
+        
       </section>
 
 
@@ -50,6 +62,10 @@
     <script src="./using-a-controller/ttDirective.controller.js"></script>
     <script src="./using-a-controller/directive.js"></script>
 
-    </script>
+    <!-- Translusion sample -->
+    <script src="./transclusion/traveller.controller.js" charset="utf-8"></script>
+    <script src="./transclusion/ttToolbar.direcive.js" charset="utf-8"></script>
+    <script src="./transclusion/ttTraveller.directive.js" charset="utf-8"></script>
+
   </body>
 </html>
