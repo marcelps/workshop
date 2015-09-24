@@ -10,9 +10,14 @@
   function ttIsolatedScope() {
     return {
       scope: {
-        message: '@'
+        // name info im html
+        // message: '@info'
+        message: '@',
+        // two way binding
+        age: '=',
+        // callback function
+        greet: '&'
       },
-      // plugin emmet
       templateUrl: './isolated-scope/template.html'
     }
   }
