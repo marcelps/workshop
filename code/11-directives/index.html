@@ -19,7 +19,9 @@
 
       <!-- Our Code goes here -->
       <section class="sample" ng-controller="directivesController as vm">
-        <tt-shared-scope />
+        <tt-shared-scope></tt-shared-scope>
+
+        <tt-isolated-scope message="{{vm.message}}"></tt-isolated-scope>
       </section>
 
     </div>
@@ -28,8 +30,14 @@
 
     <!-- AngularJS -->
     <script src="../../bower_components/angular/angular.js"></script>
+
     <script src="./directives.module.js"></script>
     <script src="./directives.controller.js"></script>
-    <script src="./directive.shared-scope.js"></script>
+
+    <script src="./shared-scope/directive.shared-scope.js"></script>
+
+    <script src="./isolated-scope/directive.js">
+
+    </script>
   </body>
 </html>
