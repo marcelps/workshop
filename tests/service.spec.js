@@ -1,5 +1,4 @@
-/*
-describe('When all trips are loaded', function() {
+xdescribe('When all trips are loaded', function() {
   var traineesFactory;
 
   beforeEach(module('factories'));
@@ -14,4 +13,3 @@ describe('When all trips are loaded', function() {
     expect(traineesFactory.getAll().length).toEqual(3);
   });
 });
-*/

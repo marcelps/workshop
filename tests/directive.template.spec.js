@@ -1,4 +1,4 @@
-describe('When a directive having a inline template is compiled', function() {
+xdescribe('When a directive having a inline template is compiled', function() {
 
   var element;
   var scope;
