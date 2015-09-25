@@ -18,9 +18,12 @@ module.exports = function(config) {
       // Angular
       './bower_components/angular/angular.js',
       './bower_components/angular-mocks/angular-mocks.js',
+      './bower_components/angular-route/angular-route.js',
 
       './code/**/*.module.js',
       './code/**/*.js',
+
+      './code/**/*.html',
       './tests/**/*.spec.js'
     ],
 
@@ -34,6 +37,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      './code/**/*.html': ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+      moduleName: 'templates',
+      cacheIdFromPath: function(filepath) {
+        return filepath.replace('code/11-directives/', './');
+      }
     },
 
 
